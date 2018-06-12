@@ -1,0 +1,21 @@
+# modified from https://github.com/haasad/PyPardisoProject
+build: false
+
+environment:
+  matrix:
+    - JOB: "Python 3.6, 64bit"
+      PYTHON: "C:\\Python36_64"
+      PYTHON_VERSION: "3.6"
+      PYTHON_ARCH: "64"
+      CONDA_PY: "36"
+      CONDA_ENV_PY: "3.6"
+
+install:
+  - "powershell .\\ci\\install_miniconda.ps1"
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "conda update conda"
+  - "conda config --set always_yes yes --set changeps1 no"
+  - "conda build .\\recipe"
+  - "conda create -n test_env python=%CONDA_ENV_PY%"
+  - "activate test_env"
+  - "conda install --use-local eidl7zip"
