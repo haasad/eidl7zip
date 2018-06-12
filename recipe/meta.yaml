@@ -6,14 +6,18 @@ build:
   number: 0
 
 source:
-  fn: p7zip_16.02_src_all.tar.bz2 
-  url: http://iweb.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2 
-  md5: a0128d661cfe7cc8c121e73519c54fbf
+  fn: p7zip_16.02_src_all.tar.bz2 [not win]
+  url: http://iweb.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2 [not win]
+  md5: a0128d661cfe7cc8c121e73519c54fbf [not win]
+  fn: 7z1805.exe [win]
+  url: https://download.sourceforge.net/sevenzip/7z1805.exe [win]
+
 
 test:
   commands:
-    - touch xxx
-    - 7za a xxx.7z xxx
+    - touch xxx [not win]
+    - 7za a xxx.7z xxx [not win]
+    - 7za -h [win]
 
 about:
   home: http://sourceforge.net/projects/p7zip/
