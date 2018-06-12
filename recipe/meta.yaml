@@ -1,0 +1,21 @@
+package:
+  name: eidl7zip
+  version: "16.02"
+
+build:
+  number: 0
+
+source:
+  fn: p7zip_16.02_src_all.tar.bz2 
+  url: http://iweb.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2 
+  md5: a0128d661cfe7cc8c121e73519c54fbf
+
+test:
+  commands:
+    - touch xxx
+    - 7za a xxx.7z xxx
+
+about:
+  home: http://sourceforge.net/projects/p7zip/
+  summary: p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org ) for Unix.
+  license: LGPLv2
