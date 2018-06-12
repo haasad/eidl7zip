@@ -17,7 +17,11 @@ install:
       wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
     fi
   - bash miniconda.sh -b -p $HOME/miniconda
-  - echo ". /home/travis/miniconda/etc/profile.d/conda.sh" >> ~/.bashrc
+  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+      echo ". /Users/travis/miniconda/etc/profile.d/conda.sh" >> ~/.bashrc;
+    else
+      echo ". /home/travis/miniconda/etc/profile.d/conda.sh" >> ~/.bashrc;
+    fi
   - source ~/.bashrc
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
