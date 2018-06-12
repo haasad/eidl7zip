@@ -1,5 +1,9 @@
 #!/bin/bash
-sed -i.bak "/^DEST_HOME/c DEST_HOME=$PREFIX" makefile.common
+if [ "$(uname)" == "Darwin" ]; then
+    sed -i.bak "s|DEST_HOME=.*|DEST_HOME=$PREFIX|" makefile.common;
+else
+    sed -i.bak "/^DEST_HOME/c DEST_HOME=$PREFIX" makefile.common;
+fi
 
 make 7za
 make install
