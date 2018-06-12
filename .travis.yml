@@ -37,7 +37,7 @@ after_success:
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
       cp /Users/travis/miniconda/conda-bld/osx-64/*.tar.bz2 .;
     else
-      cp /Users/travis/miniconda/conda-bld/linux-64/*.tar.bz2 .;
+      cp /home/travis/miniconda/conda-bld/linux-64/*.tar.bz2 .;
     fi
   - anaconda -t $CONDA_TOKEN upload --force eidl7zip*.tar.bz2
 
