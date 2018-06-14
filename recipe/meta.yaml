@@ -9,7 +9,7 @@ source:
   fn: p7zip_16.02_src_all.tar.bz2 [not win]
   url: http://iweb.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2 [not win]
   md5: a0128d661cfe7cc8c121e73519c54fbf [not win]
-  fn: 7z1805.exe [win]
+  fn: 7za920.zip [win]
   url: https://www.7-zip.org/a/7za920.zip [win]
   md5: 2fac454a90ae96021f4ffc607d4c00f8 [win]
 
