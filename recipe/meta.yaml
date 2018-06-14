@@ -3,7 +3,7 @@ package:
   version: "16.02"
 
 build:
-  number: 0
+  number: 1
 
 source:
   fn: p7zip_16.02_src_all.tar.bz2 [not win]
