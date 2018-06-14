@@ -21,3 +21,8 @@ build_script:
   - "conda create -n test_env python=%CONDA_ENV_PY%"
   - "activate test_env"
   - "conda install --use-local eidl7zip"
+
+on_success:
+  - "copy C:\Python36_64\conda-bld\win-64\*.tar.bz2 ."
+  - "anaconda -t $CONDA_TOKEN upload --force *.tar.bz2"
+
