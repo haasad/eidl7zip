@@ -23,6 +23,6 @@ build_script:
   - "conda install --use-local eidl7zip"
 
 on_success:
-  - "copy C:\Python36_64\conda-bld\win-64\*.tar.bz2 ."
+  - "copy C:\\Python36_64\\conda-bld\\win-64\\*.tar.bz2 ."
   - "anaconda -t $CONDA_TOKEN upload --force *.tar.bz2"
 
