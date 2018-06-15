@@ -17,7 +17,7 @@ source:
 test:
   commands:
     - touch xxx [not win]
-    - 7z a xxx.7z xxx [not win]
+    - 7za a xxx.7z xxx [not win]
     - 7za -h [win]
 
 about:

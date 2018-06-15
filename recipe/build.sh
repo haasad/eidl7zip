@@ -5,5 +5,5 @@ else
     sed -i.bak "/^DEST_HOME/c DEST_HOME=$PREFIX" makefile.common;
 fi
 
-make 7z
+make 7za
 make install
