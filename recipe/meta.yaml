@@ -1,6 +1,6 @@
 package:
   name: eidl7zip
-  version: "16.02"
+  version: "1.0.0"
 
 build:
   number: 1
@@ -21,6 +21,9 @@ test:
     - 7za -h [win]
 
 about:
-  home: http://sourceforge.net/projects/p7zip/
-  summary: p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org ) for Unix.
+  home: https://github.com/haasad/eidl7zip
+  summary: Makes 7zip available cross-platform by packaging 7-zip and p7zip in a single conda package
   license: LGPLv2
+  description: |
+    # eidl7zip
+    This conda package was originally developed for the [EcoInventDownLoader](https://github.com/haasad/EcoInventDownLoader). For Windows it provides the command-line version of [7-zip](https://www.7-zip.org/) (version 9.20), for Linux and OSX [p7zip](https://sourceforge.net/projects/p7zip/) (version 16.02). Both projects are licensed under the [GNU Lesser General Public License v2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html). The conda recipe for this package is available on [github](https://github.com/haasad/eidl7zip).
